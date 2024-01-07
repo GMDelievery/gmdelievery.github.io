@@ -2,27 +2,36 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>GM-Delivery</title>
-    <style>
-        body {
-            background-image: url('Logos/github.jpg'); /* Hintergrundbild setzen */
-            background-size: cover; /* Bild auf die Größe des Fensters anpassen */
-            background-position: center; /* Bild zentrieren */
-            text-align: center; /* Zentriert den Text */
-            font-family: Arial, sans-serif; /* Verwendete Schriftart */
-        }
-        .logo {
-            max-width: 200px; /* Legt die maximale Breite des Logos fest */
-            margin-bottom: 20px; /* Abstand unterhalb des Logos */
-        }
-        .text-under-logo {
-            color: #0080ff; /* Helles Blau für den Text */
-        }
-    </style>
+    <title>Mein Shop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hier könntest du weiterhin dein Logo und den Text platzieren -->
-    <img src="logo.png" alt="GM-Delivery Logo" class="logo">
-    <p class="text-under-logo">GM-Delivery</p>
+    <header>
+        <h1>Willkommen in unserem Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#">Produkte</a></li>
+                <li><a href="#">Warenkorb</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <article class="product">
+                <img src="product1.jpg" alt="Produkt 1">
+                <h2>Produkt 1</h2>
+                <p>Beschreibung des Produkts 1</p>
+                <button>Zum Warenkorb hinzufügen</button>
+            </article>
+            <!-- Weitere Produkte hier -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mein Shop</p>
+    </footer>
 </body>
 </html>
