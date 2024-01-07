@@ -16,6 +16,18 @@
             popup.document.write('<input type="submit" value="Registrieren">');
             popup.document.write('</form>');
         }
+
+        function registerUser(event) {
+            event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+
+            // Hier könntest du die Logik für die Registrierung implementieren
+            // Zum Beispiel: Daten validieren und an den Server senden
+
+            // Schließe das Popup-Fenster nach der Registrierung
+            if (popupRef) {
+                popupRef.close();
+            }
+        }
     </script>
 </head>
 <body>
