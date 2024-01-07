@@ -5,44 +5,21 @@
     <title>Mein Shop</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        var popupRef;
-
         function openPopup() {
-            popupRef = window.open('', 'Registration', 'width=400,height=300');
-            popupRef.document.write('<h2>Registrierung</h2>');
-            popupRef.document.write('<div class="popup-form">');
-            popupRef.document.write('<form onsubmit="registerUser(event);">');
-            popupRef.document.write('<input type="text" id="username" name="username" placeholder="Spielername">');
-            popupRef.document.write('<input type="text" id="apiToken" name="apiToken" placeholder="API-Token">');
-            popupRef.document.write('<input type="submit" value="Registrieren">');
-            popupRef.document.write('</form>');
-            popupRef.document.write('</div>');
-        }
-
-        function registerUser(event) {
-            event.preventDefault();
-            if (popupRef) {
-                popupRef.close();
-            }
+            var popup = window.open('', 'Registration', 'width=400,height=300');
+            popup.document.write('<h2>Registrierung</h2>');
+            popup.document.write('<form>');
+            popup.document.write('<label for="username">Spielername:</label><br>');
+            popup.document.write('<input type="text" id="username" name="username"><br><br>');
+            popup.document.write('<label for="apiToken">API-Token:</label><br>');
+            popup.document.write('<input type="text" id="apiToken" name="apiToken"><br><br>');
+            popup.document.write('<input type="submit" value="Registrieren">');
+            popup.document.write('</form>');
         }
     </script>
 </head>
-
-    <main>
-        <section class="products">
-            <article class="product">
-                <img src="product1.jpg" alt="Produkt 1">
-                <h2>Produkt 1</h2>
-                <p>Beschreibung des Produkts 1</p>
-                <button>Zum Warenkorb hinzufügen</button>
-            </article>
-            <!-- Weitere Produkte hier -->
-        </section>
-    </main>
-
-    
 <body>
-    <header>
+    <header style="background-color: #04D5B2;">
         <h1>Willkommen in unserem Shop</h1>
         <nav>
             <ul>
