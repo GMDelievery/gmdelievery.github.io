@@ -8,6 +8,7 @@
         function openPopup() {
             var popup = window.open('', 'Registration', 'width=400,height=300');
             popup.document.write('<h2>Registrierung</h2>');
+            popup.document.write('<form action="registrierung.php" method="post">');
             popup.document.write('<form>');
             popup.document.write('<label for="username">Spielername:</label><br>');
             popup.document.write('<input type="text" id="username" name="username"><br><br>');
@@ -15,6 +16,7 @@
             popup.document.write('<input type="text" id="apiToken" name="apiToken"><br><br>');
             popup.document.write('<input type="submit" value="Registrieren">');
             popup.document.write('</form>');
+    </form>
         }
     </script>
 </head>
