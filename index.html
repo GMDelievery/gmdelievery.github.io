@@ -1,49 +1,83 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GM-Delivery</title>
-    <style>
-        body {
-            position: relative; /* Position relativ setzen */
-            text-align: center; /* Zentriert den Text */
-            font-family: Arial, sans-serif; /* Verwendete Schriftart */
-            color: white; /* Textfarbe auf Weiß setzen */
-            margin: 0; /* Rand auf 0 setzen */
-            padding: 0; /* Padding auf 0 setzen */
-        }
-        body::before {
-            content: ""; /* Leerer Inhalt für das Pseudo-Element */
-            background-image: url('Logos/github.jpg'); /* Hintergrundbild setzen */
-            background-size: cover; /* Bild auf die Größe des Fensters anpassen */
-            background-position: center; /* Bild zentrieren */
-            position: absolute; /* Position absolut setzen */
-            top: 0; /* Abstand oben auf 0 setzen */
-            left: 0; /* Abstand links auf 0 setzen */
-            right: 0; /* Abstand rechts auf 0 setzen */
-            bottom: 0; /* Abstand unten auf 0 setzen */
-            z-index: -1; /* Pseudo-Element hinter den Inhalt setzen */
-            opacity: 0.7; /* Deckkraft auf 70% setzen */
-        }
-        .content {
-            position: relative; /* Position relativ setzen */
-            z-index: 1; /* Inhalt vor dem Hintergrund setzen */
-        }
-        .logo {
-            max-width: 200px; /* Legt die maximale Breite des Logos fest */
-            margin-bottom: 20px; /* Abstand unterhalb des Logos */
-            filter: brightness(50%); /* Abdunkelung des Logos um 50% */
-        }
-        .text-under-logo {
-            color: #0080ff; /* Helles Blau für den Text */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Gmazon</title>
 </head>
 <body>
-    <div class="content">
-        <!-- Hier könntest du weiterhin dein Logo und den Text platzieren -->
-        <img src="Logos/logo.png" alt="GM-Delivery Logo" class="logo">
-        <p class="text-under-logo">GM-Delivery</p>
+    <div class="background-image"></div>
+
+    <div class="top-panel">
+        <div class="logo">
+            <a href="https://fluxxxto.github.io/gmazon">
+                <img src="https://i.imgur.com/FEvrrqa.png" alt="gmazon">
+            </a>
+        </div>
+
+        <div class="menu-items">
+            <a href="https://fluxxxto.github.io/gmazon/bon/">BON</a>
+            <a href="https://fluxxxto.github.io/gmazon/beapart/">MITMACHEN</a>
+            <div id="cart-icon" onclick="toggleCartPopup()">
+                🛒
+                <span id="cart-count">0</span> 
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/image2.png" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="images/image3.png" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="images/image1.png" alt="Slide 3">
+            </div>
+        </div>
+    </div>
+    
+    <div id="cart-popup" class="cart-popup">
+        <div id="cart-content" class="cart-content">
+
+        </div>
+        <div id="cart-total" class="cart-total">
+
+            Gesamt: <span id="total-amount">0.00 €</span>
+        </div>
+        <div class="checkoutButton">
+            <button onclick="setDeliveryOption('liefern')">Liefern</button>
+
+        </div>
+
+        <div id="coupon-input-container">
+            <label for="couponInput">Coupon-Code:</label>
+            <input type="text" id="couponInput" placeholder="Gib deinen Coupon-Code ein">
+            <button onclick="applyCoupon()">Anwenden</button>
+        </div>
+    </div>
+    
+    
+    <div class="panel">
+        <p>Derzeit haben wir wenig auswahl. Wir sind noch im aufbau und in der Testversion</p>
+        <input type="text" id="searchInput" placeholder="Suche nach Blöcken, Items, Munition...">
+        <ul class="article-list" id="articleList"></ul>
+    </div>
+
+
+    <script src="index.js"></script>
+    <script src="slider.js"></script>
+
+    <div id="disclaimer-text">
+        <p id="disclaimer">Alle Inhalte dieser Seite beziehen sich auf das virtuelle Spielgeschehen auf dem Minecraft-Server „GermanMiner.DE“.</p>
+        <p id="disclaimer">Diese Seite verfolgt keine kommerziellen Ziele.</p>
+        <p id="disclaimer">Weitere Infos (Impressum) <a href="https://fluxxxto.github.io/gmazon/impressum.html">hier</a></p>
+        <p id="disclaimer">© 2024 fluxxxto.github.io</p>
     </div>
 </body>
 </html>
