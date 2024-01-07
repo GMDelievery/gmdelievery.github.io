@@ -5,29 +5,24 @@
     <title>Mein Shop</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        var popupRef; // Referenzvariable für das Popup-Fenster
+        var popupRef;
 
         function openPopup() {
             popupRef = window.open('', 'Registration', 'width=400,height=300');
-            popupRef.document.write('<h2 style="text-align: center;">Registrierung</h2>');
-            popupRef.document.write('<div style="text-align: center;">');
+            popupRef.document.write('<h2>Registrierung</h2>');
+            popupRef.document.write('<div class="popup-form">');
             popupRef.document.write('<form onsubmit="registerUser(event);">');
-            popupRef.document.write('<label for="username">Spielername:</label><br>');
-            popupRef.document.write('<input type="text" id="username" name="username" style="width: 80%; padding: 5px;"><br><br>');
-            popupRef.document.write('<label for="apiToken">API-Token:</label><br>');
-            popupRef.document.write('<input type="text" id="apiToken" name="apiToken" style="width: 80%; padding: 5px;"><br><br>');
-            popupRef.document.write('<input type="submit" value="Registrieren" style="padding: 8px 16px; background-color: #04D5B2; color: white; border: none; border-radius: 4px; cursor: pointer;">');
+            popupRef.document.write('<label for="username">Spielername:</label>');
+            popupRef.document.write('<input type="text" id="username" name="username"><br><br>');
+            popupRef.document.write('<label for="apiToken">API-Token:</label>');
+            popupRef.document.write('<input type="text" id="apiToken" name="apiToken"><br><br>');
+            popupRef.document.write('<input type="submit" value="Registrieren">');
             popupRef.document.write('</form>');
             popupRef.document.write('</div>');
         }
 
         function registerUser(event) {
-            event.preventDefault(); // Verhindert das Standardverhalten des Formulars
-
-            // Hier könntest du die Logik für die Registrierung implementieren
-            // Zum Beispiel: Daten validieren und an den Server senden
-
-            // Schließe das Popup-Fenster nach der Registrierung
+            event.preventDefault();
             if (popupRef) {
                 popupRef.close();
             }
@@ -35,15 +30,15 @@
     </script>
 </head>
 <body>
-    <header style="background-color: #04D5B2;">
-        <h1 style="text-align: center;">Willkommen in unserem Shop</h1>
-        <nav style="text-align: center;">
+    <header>
+        <h1>Willkommen in unserem Shop</h1>
+        <nav>
             <ul>
-                <li><a href="#" onclick="openPopup();" style="color: white; text-decoration: none;">Register</a></li>
+                <li><a href="#" onclick="openPopup();">Register</a></li>
             </ul>
         </nav>
     </header>
-    <footer style="text-align: center;">
+    <footer>
         <p>&copy; <?php echo date("Y"); ?> Mein Shop</p>
     </footer>
 </body>
