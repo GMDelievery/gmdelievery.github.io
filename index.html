@@ -5,18 +5,22 @@
     <title>Mein Shop</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        function openPopup() {
+        function openRegistrationPopup() {
             var popup = window.open('', 'Registration', 'width=400,height=300');
+            popup.document.write('<!DOCTYPE html>');
+            popup.document.write('<html>');
+            popup.document.write('<head><title>Registrierung</title></head>');
+            popup.document.write('<body>');
             popup.document.write('<h2>Registrierung</h2>');
             popup.document.write('<form action="php/register.php" method="post">');
-            popup.document.write('<form>');
-            popup.document.write('<label for="username">Spielername:</label><br>');
+            popup.document.write('<label for="username">Benutzername:</label><br>');
             popup.document.write('<input type="text" id="username" name="username"><br><br>');
             popup.document.write('<label for="apiToken">API-Token:</label><br>');
             popup.document.write('<input type="text" id="apiToken" name="apiToken"><br><br>');
             popup.document.write('<input type="submit" value="Registrieren">');
             popup.document.write('</form>');
-    </form>
+            popup.document.write('</body>');
+            popup.document.write('</html>');
         }
     </script>
 </head>
