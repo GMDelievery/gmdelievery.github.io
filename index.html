@@ -12,10 +12,8 @@
             popupRef.document.write('<h2>Registrierung</h2>');
             popupRef.document.write('<div class="popup-form">');
             popupRef.document.write('<form onsubmit="registerUser(event);">');
-            popupRef.document.write('<label for="username">Spielername:</label>');
-            popupRef.document.write('<input type="text" id="username" name="username"><br><br>');
-            popupRef.document.write('<label for="apiToken">API-Token:</label>');
-            popupRef.document.write('<input type="text" id="apiToken" name="apiToken"><br><br>');
+            popupRef.document.write('<input type="text" id="username" name="username" placeholder="Spielername">');
+            popupRef.document.write('<input type="text" id="apiToken" name="apiToken" placeholder="API-Token">');
             popupRef.document.write('<input type="submit" value="Registrieren">');
             popupRef.document.write('</form>');
             popupRef.document.write('</div>');
