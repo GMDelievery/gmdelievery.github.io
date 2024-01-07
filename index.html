@@ -5,16 +5,34 @@
     <title>GM-Delivery</title>
     <style>
         body {
-            background-image: url('Logos/github.jpg'); /* Hintergrundbild setzen */
-            background-size: cover; /* Bild auf die Größe des Fensters anpassen */
-            background-position: center; /* Bild zentrieren */
+            position: relative; /* Position relativ setzen */
             text-align: center; /* Zentriert den Text */
             font-family: Arial, sans-serif; /* Verwendete Schriftart */
             color: white; /* Textfarbe auf Weiß setzen */
+            margin: 0; /* Rand auf 0 setzen */
+            padding: 0; /* Padding auf 0 setzen */
+        }
+        body::before {
+            content: ""; /* Leerer Inhalt für das Pseudo-Element */
+            background-image: url('Logos/github.jpg'); /* Hintergrundbild setzen */
+            background-size: cover; /* Bild auf die Größe des Fensters anpassen */
+            background-position: center; /* Bild zentrieren */
+            position: absolute; /* Position absolut setzen */
+            top: 0; /* Abstand oben auf 0 setzen */
+            left: 0; /* Abstand links auf 0 setzen */
+            right: 0; /* Abstand rechts auf 0 setzen */
+            bottom: 0; /* Abstand unten auf 0 setzen */
+            z-index: -1; /* Pseudo-Element hinter den Inhalt setzen */
+            opacity: 0.7; /* Deckkraft auf 70% setzen */
+        }
+        .content {
+            position: relative; /* Position relativ setzen */
+            z-index: 1; /* Inhalt vor dem Hintergrund setzen */
         }
         .logo {
             max-width: 200px; /* Legt die maximale Breite des Logos fest */
             margin-bottom: 20px; /* Abstand unterhalb des Logos */
+            filter: brightness(50%); /* Abdunkelung des Logos um 50% */
         }
         .text-under-logo {
             color: #0080ff; /* Helles Blau für den Text */
@@ -22,8 +40,10 @@
     </style>
 </head>
 <body>
-    <!-- Hier könntest du weiterhin dein Logo und den Text platzieren -->
-    <img src="logo.png" alt="GM-Delivery Logo" class="logo">
-    <p class="text-under-logo">GM-Delivery</p>
+    <div class="content">
+        <!-- Hier könntest du weiterhin dein Logo und den Text platzieren -->
+        <img src="Logos/logo.png" alt="GM-Delivery Logo" class="logo">
+        <p class="text-under-logo">GM-Delivery</p>
+    </div>
 </body>
 </html>
