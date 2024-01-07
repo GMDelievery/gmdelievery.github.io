@@ -78,10 +78,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
-.background-image {
-    background-image: url('Logos/github.jpg'); /* Pfad zum Hintergrundbild */
-    background-size: cover;
-    background-position: center;
-    height: 400px; /* Höhe des Hintergrundbilds anpassen */
-}
