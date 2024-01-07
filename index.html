@@ -1,3 +1,7 @@
+Um ein Hintergrundbild für die Webseite zu setzen, kannst du die CSS-Eigenschaft background-image verwenden. Hier ist ein Beispiel, wie du das Bild "github.jpg" als Hintergrundbild für die Webseite einfügst:
+
+html
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -5,17 +9,25 @@
     <title>GM-Delivery</title>
     <style>
         body {
-            background-color: #ffffff; /* Hintergrundfarbe weiß */
+            background-image: url('Logos/github.jpg'); /* Hintergrundbild setzen */
+            background-size: cover; /* Bild auf die Größe des Fensters anpassen */
+            background-position: center; /* Bild zentrieren */
             text-align: center; /* Zentriert den Text */
             font-family: Arial, sans-serif; /* Verwendete Schriftart */
+            color: white; /* Textfarbe auf Weiß setzen */
         }
-        h1 {
+        .logo {
+            max-width: 200px; /* Legt die maximale Breite des Logos fest */
+            margin-bottom: 20px; /* Abstand unterhalb des Logos */
+        }
+        .text-under-logo {
             color: #0080ff; /* Helles Blau für den Text */
         }
     </style>
 </head>
 <body>
-    <h1>GM-Delivery</h1>
+    <!-- Hier könntest du weiterhin dein Logo und den Text platzieren -->
+    <img src="logo.png" alt="GM-Delivery Logo" class="logo">
+    <p class="text-under-logo">GM-Delivery</p>
 </body>
-    <p style="background-image: url('Logos\github.jpg');"></p>
 </html>
